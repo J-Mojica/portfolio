@@ -10,7 +10,6 @@
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: #121212;
-    background-image: radial-gradient(circle at top, rgba(3, 77, 3, 0.1), #121212 20%);
 }
 
 /* Navigation */
@@ -23,6 +22,8 @@ nav {
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    box-shadow: 0px 2px 250px rgba(62, 93, 82, 0.4)
 }
 
 nav, nav a, nav a:visited {
@@ -52,7 +53,7 @@ nav, nav a, nav a:visited {
 .nav-menu ul li a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0F0F0F;
+    background-color: transparent;
     text-decoration: none;
     border-radius: 5px;
     transition: color 0.3s ease;
@@ -92,15 +93,12 @@ nav, nav a, nav a:visited {
     grid-template-columns: 2fr 1fr;
     width: 95%;
     font-family: "Roboto Flex", sans-serif;
-}
-
-.hero-text, .hero-picture {
-    margin: 10px;
-    height: 100%;
+    gap: 10px;
 }
 
 .hero-text {
     background-color: #1A1A1A;
+    background: linear-gradient(180deg, rgba(16, 16, 16, 0.6) 0%, rgba(0, 0, 0, 0.6) 66%);
     color: #E1EAE5;
     border-radius: 20px;
     padding: 50px 20px 20px 20px;
@@ -110,27 +108,55 @@ nav, nav a, nav a:visited {
     height: 100%;
 }
 
-.hero-text h1 {
+.hero-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    margin: 2%;
+    gap: 5%;
+}
+.hero-graphic{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-width: 250px;
+}
+
+.hero-graphic img {
+    width: 80%;
+    height: auto;
+}
+
+.hero-titles{
+    border-right: 2px solid rgba(225, 234, 229, 1);
+    padding-right: 5%;
+}
+
+.hero-titles h1 {
     text-transform: uppercase;
     color: rgba(225, 234, 229, 1);
     font-size: 3em;
 }
 
-.hero-text h2 {
+.hero-titles h2 {
     text-transform: uppercase;
     color: rgba(243, 246, 245, 0.62);
     font-size: 2em;
 }
 
-.hero-text h3 {
+.hero-titles h3 {
     text-transform: uppercase;
     color: rgba(243, 246, 245, 0.44);
     font-size: 1.5em;
 }
 
-.hero-picture{
+.hero-picture {
     border-radius: 20px;
+    margin: 0px;
 }
+
 .hero-picture img {
     height: 100%;
     width: 100%;
